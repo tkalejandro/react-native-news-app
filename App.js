@@ -3,8 +3,23 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={{
+      backgroundColor: "silver",
+      padding: 50,
+      flex: 1,
+      flexDirection: "row",
+      justifyContent: "space-around",
+      alignItems: "center"
+    }}>
+      <View style={{ width: 60, height: 60, backgroundColor: "red" }}>
+        <Text>A</Text>
+      </View>
+      <View style={{ width: 60, height: 60, backgroundColor: "blue" }}>
+        <Text>B</Text>
+      </View>
+      <View style={{ width: 60, height: 60, backgroundColor: "yellow" }}>
+        <Text>C</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
