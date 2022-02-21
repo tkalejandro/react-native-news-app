@@ -1,12 +1,14 @@
 
 import React from "react";
-import { StyleSheet,  Text, View, Platform } from "react-native";
+import { StyleSheet,  Text, View, Image } from "react-native";
 
 const Card = () => {
   return (
    <View style={styles.card}>
        <View style={styles.imageWrapper}>
-
+                <Image 
+                style={styles.image}
+                source={require("../../assets/shanGHAI.jpeg")} />
        </View>
        <View style={styles.titleWrapper}>
             <Text> Dummy Title</Text>
@@ -43,6 +45,10 @@ const styles = StyleSheet.create({
     },
     descriptionWrapper: {
         paddingHorizontal: 15
+    },
+    image: {
+        width: "100%",
+        height: "100%"
     }
 })
 export default Card
