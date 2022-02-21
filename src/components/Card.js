@@ -13,10 +13,10 @@ const Card = () => {
                  />
        </View>
        <View style={styles.titleWrapper}>
-            <Text> Dummy Title</Text>
+            <Text style={styles.title}> Dummy Title</Text>
        </View>
        <View style={styles.descriptionWrapper}>
-            <Text> This is a dummy description</Text>
+            <Text style={styles.description}> This is a dummy description</Text>
        </View>
    </View>
   )
@@ -46,6 +46,12 @@ const styles = StyleSheet.create({
     titleWrapper: {
         height: "10%",
         paddingHorizontal: 15
+    },
+    title:{
+        fontFamily: "Ubuntu-Bold"
+    },
+    description:{
+        fontFamily: "Ubuntu"
     },
     descriptionWrapper: {
         paddingHorizontal: 15
