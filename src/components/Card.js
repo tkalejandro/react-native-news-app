@@ -8,7 +8,9 @@ const Card = () => {
        <View style={styles.imageWrapper}>
                 <Image 
                 style={styles.image}
-                source={require("../../assets/shanGHAI.jpeg")} />
+                // source={require("../../assets/shanGHAI.jpeg")}
+                source={{uri: "https://img.static-kl.com/images/media/4EA8CE28-6BF4-4503-88618BAEF81EE29C?aspect_ratio=1:1&min_width=456"}}
+                 />
        </View>
        <View style={styles.titleWrapper}>
             <Text> Dummy Title</Text>
@@ -29,7 +31,9 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowOffset: {width:0, height: 2},
         shadowRadius: 8,
-        elevation: 5
+        elevation: 5,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
 
     },
     imageWrapper: {
