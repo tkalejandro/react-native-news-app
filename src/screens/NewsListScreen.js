@@ -5,12 +5,7 @@ import Card from '../components/Card'
 const NewsListScreen = (props) => {
     
     return (
-
-       
-            <Card navigation={props.navigation}/>
-           
-
-
+ <Card navigation={props.navigation}/>
     )
 }
 
