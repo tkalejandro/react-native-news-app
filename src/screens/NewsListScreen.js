@@ -1,16 +1,16 @@
 import React from 'react'
-import { StyleSheet, View, Text } from "react-native"
+import { StyleSheet, View, Text, TouchableOpacity } from "react-native"
 import Header from '../components/Header'
 import Card from '../components/Card'
-const NewsListScreen = () => {
+const NewsListScreen = (props) => {
+    
     return (
-        <View>
+
+       
+            <Card navigation={props.navigation}/>
            
-                
-                <Card />
-                
-            
-        </View>
+
+
     )
 }
 
