@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1
     },
     title: {
-        marginTop: 40,
+        marginTop: 20,
         textAlign: "center",
         fontSize: 20,
         color: Platform.OS === "android" ? "#ffffff" : "#72bcd4"

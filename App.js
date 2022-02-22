@@ -1,10 +1,8 @@
-import React, {useState} from "react"
+import React from "react"
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Card from './src/components/Card';
-import Header from './src/components/Header';
 import { useFonts } from "expo-font";
-
+import AppNavigator from "./src/navigation/AppNavigator";
 
 
 
@@ -19,11 +17,7 @@ export default function App() {
   }
   
   return (
-    <View>
-      <Header />
-      <Card />
-      <StatusBar style="auto" />
-    </View>
+    <AppNavigator />
   );
 }
 
