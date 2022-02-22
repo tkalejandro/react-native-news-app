@@ -4,6 +4,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from "expo-font";
 import AppNavigator from "./src/navigation/AppNavigator";
 import 'react-native-gesture-handler';
+import { Provider } from "react-redux";
+import store from "./src/redux/store"
 
 
 export default function App() {
@@ -17,7 +19,11 @@ export default function App() {
   }
   
   return (
-    <AppNavigator />
+    //? Make sure there are valid reducers! Otherwise will say invalid reducers.
+    <Provider store={store}>
+      <AppNavigator />
+    </Provider>
+    
   );
 }
 

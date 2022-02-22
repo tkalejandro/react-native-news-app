@@ -10,15 +10,15 @@ const Card = (props) => {
                     <Image
                         style={styles.image}
                         // source={require("../../assets/shanGHAI.jpeg")}
-                        source={{ uri: "https://img.static-kl.com/images/media/4EA8CE28-6BF4-4503-88618BAEF81EE29C?aspect_ratio=1:1&min_width=456" }}
+                        source={{ uri: props.image }}
                     />
                 </View>
                 <View style={styles.titleWrapper}>
-                    <Text style={styles.title}> Dummy Title</Text>
+                    <Text style={styles.title}> {props.title}</Text>
                     <MaterialIcons name="favorite-border" size={24} color="red" />
                 </View>
                 <View style={styles.descriptionWrapper}>
-                    <Text style={styles.description}> This is a dummy description</Text>
+                    <Text style={styles.description}> {props.description}</Text>
                 </View>
             </View>
         </TouchableOpacity>
