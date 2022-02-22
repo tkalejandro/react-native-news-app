@@ -9,7 +9,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 const Stack = createNativeStackNavigator()
 const Tabs = createBottomTabNavigator()
-
+//? Each Tab Navigator has their own Stack Navigator
 const HomeNavigator = () => {
     return (
         <Stack.Navigator>
@@ -40,7 +40,7 @@ const AppNavigator = () => {
     return (
         <NavigationContainer>
             <Tabs.Navigator
-                
+                //? This is to print Icons 
                 screenOptions={({ route }) => ({
                     tabBarIcon: () => {
                         let iconName;
