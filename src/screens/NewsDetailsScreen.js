@@ -1,12 +1,15 @@
 import React from 'react'
 import { StyleSheet, View, Text, ImageBackground } from "react-native"
 import { MaterialIcons } from "@expo/vector-icons"
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import * as newsAction from "../redux/actions/newsAction"
 const NewsDetailsScreen = (props) => {
 
+  const dispatch = useDispatch()
   //? This come from Params
   const {articleUrl} = props.route.params
   const article = useSelector(state => state.news.articles.articles.find(article => article.url === articleUrl))
+  const isFav = useSelector(state => state.news.favorites.some(article => article.url === articleUrl))
   return (
     <View style={styles.container}>
       <View style={styles.heading}>
@@ -18,7 +21,11 @@ const NewsDetailsScreen = (props) => {
         <ImageBackground source={{uri: article.urlToImage}} style={styles.image}>
           <View style={styles.titleContainer}>
             <Text style={styles.author}>{article.author}</Text>
-            <MaterialIcons />
+            <MaterialIcons 
+                    onPress={() => {
+                        dispatch(newsAction.toggleFavorites(article.url))
+                    }}
+                    name={isFav ? 'favorite' : 'favorite-border'} size={24} color="red" />
           </View>
         </ImageBackground>
       </View>
