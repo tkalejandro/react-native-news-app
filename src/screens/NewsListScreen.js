@@ -18,7 +18,7 @@ const NewsListScreen = (props) => {
     }, [dispatch])
 
     const {articles} = useSelector(state => state.news.articles)
-    console.log(articles)
+    //console.log(articles)
 
     return (
 
@@ -31,6 +31,7 @@ const NewsListScreen = (props) => {
                 title={item.title}
                 image={item.urlToImage}
                 description={item.description}
+                url={item.url}
                  />
             )}
         />
