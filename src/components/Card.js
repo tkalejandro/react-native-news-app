@@ -11,7 +11,11 @@ const Card = (props) => {
     const isFav = useSelector(state => state.news.favorites.some(article => article.url === props.url))
     
     return (
-        <TouchableOpacity onPress={() => props.navigation.navigate("NewsDetails")}>
+        <TouchableOpacity onPress={() => {
+            props.navigation.navigate("NewsDetails", {articleUrl: props.url})
+                
+            
+        }}>
             <View style={styles.card}>
                 <View style={styles.imageWrapper}>
                     <Image
